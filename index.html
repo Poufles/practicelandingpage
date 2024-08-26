@@ -6,7 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <script type="module">
+        import Chatbox from 'https://cdn.jsdelivr.net/npm/@chaindesk/embeds@latest/dist/chatbox/index.js';
+      
+        const widget = await Chatbox.initBubble({
+          agentId: 'cm0aqsrc4056evce69g2ymbe6',
+          
+          // optional 
+          // If provided will create a contact for the user and link it to the conversation
+          contact: {
+            firstName: 'John',
+            lastName: 'Doe',
+            email: 'customer@email.com',
+            phoneNumber: '+33612345644',
+            userId: '42424242',
+          },
+          // optional
+          // Override initial messages
+          initialMessages: [
+            'Hello Georges how are you doing today?',
+            'How can I help you ?',
+          ],
+          // optional
+          // Provided context will be appended to the Agent system prompt
+          context: "The user you are talking to is John. Start by Greeting him by his name.",
+        });
+      
+        // open the chat bubble
+        widget.open();
+      
+        // close the chat bubble
+        widget.close()
+      
+        // or 
+        widget.toggle()
+      </script>
+    <title>School Work - Landing Page</title>
 </head>
 
 <body>
@@ -14,7 +49,7 @@
         <div class="left-side">
             <a href="#">
                 <figure class="logo-container">
-                    <img src="/assets/obm-logo-small.png" alt="OBM Logo" id="logo">
+                    <img src="./assets/obm-logo-small.png" alt="OBM Logo" id="logo">
                 </figure>
             </a>
         </div>
@@ -51,7 +86,7 @@
                         space that's uniquely yours.
                     </p>
                 </div>
-                <a href="#" id="action">
+                <a href="readmore.html" id="action">
                     <p id="text">Learn More</p>
                     <div id="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg"

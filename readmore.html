@@ -1,11 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Using ChainDesk Bot</title>
+    <script type="module">
+        import Chatbox from 'https://cdn.jsdelivr.net/npm/@chaindesk/embeds@latest/dist/chatbox/index.js';
+
+        const widget = await Chatbox.initBubble({
+            agentId: 'cm0aqsrc4056evce69g2ymbe6',
+
+            // optional 
+            // If provided will create a contact for the user and link it to the conversation
+            contact: {
+                firstName: 'John',
+                lastName: 'Doe',
+                email: 'customer@email.com',
+                phoneNumber: '+33612345644',
+                userId: '42424242',
+            },
+            // optional
+            // Override initial messages
+            initialMessages: [
+                'Hello Georges how are you doing today?',
+                'How can I help you ?',
+            ],
+            // optional
+            // Provided context will be appended to the Agent system prompt
+            context: "The user you are talking to is John. Start by Greeting him by his name.",
+        });
+
+        // open the chat bubble
+        widget.open();
+
+        // close the chat bubble
+        widget.close()
+
+        // or 
+        widget.toggle()
+    </script>
 </head>
+
 <body>
-    
+    <div class="mockup__text-container">
+        <p class="style-title" id="title">
+            MockUp Text for Chain Desk
+        </p>
+        <p class="style-sub-title" id="desc">
+            Company Overview:
+
+            Welcome to OBM Furniture Trading, your premier destination for exquisite and functional furniture solutions
+            designed to elevate your living and working spaces. At OBM Furniture Trading, we take pride in offering a
+            comprehensive selection of high-quality furniture, including options for home, office, and outdoor
+            environments. We are committed to providing exceptional products and personalized services to meet the
+            unique needs of each of our valued customers.
+
+            Our Offerings:
+
+            Home Furniture: Transform your home into a sanctuary with our extensive range of home furniture. From
+            elegant living room sets and cozy bedroom suites to stylish dining room furniture and versatile storage
+            solutions, we have everything you need to create a space that reflects your personal style and enhances your
+            comfort. Our collection features both contemporary and classic designs, ensuring that there is something to
+            suit every taste.
+
+            Office Furniture: Optimize your work environment with our selection of office furniture, designed to combine
+            functionality with sophistication. We offer ergonomic office chairs, sleek desks, versatile workstations,
+            and efficient storage solutions that cater to the needs of modern professionals. Whether you’re outfitting a
+            home office or a corporate workspace, our furniture is crafted to support productivity and comfort.
+
+            Outdoor Furniture: Enjoy the great outdoors with our range of durable and stylish outdoor furniture. Our
+            collection includes everything from elegant patio dining sets and cozy lounge chairs to practical garden
+            storage solutions. Designed to withstand the elements while maintaining aesthetic appeal, our outdoor
+            furniture ensures that your outdoor spaces are as comfortable and inviting as your indoor ones.
+
+            Utilities and Accessories: Enhance your living and working environments with our selection of furniture
+            utilities and accessories. We offer a variety of items such as lighting solutions, rugs, and decorative
+            pieces that complement and complete your furniture arrangements.
+
+            Furniture Parts: For those who require specific components or wish to undertake their own projects, we
+            provide a range of furniture parts and hardware. From replacement legs and knobs to custom fittings, our
+            parts are designed to meet high standards of quality and compatibility.
+
+            Upholstery Services: Our upholstery services are tailored to breathe new life into your existing furniture.
+            Whether you need a fresh look or repairs, our skilled upholsterers use high-quality fabrics and techniques
+            to revitalize your pieces. Choose from a wide range of materials and finishes to match your décor and
+            preferences.
+
+            Furniture Customization: At OBM Furniture Trading, we understand that one size doesn’t fit all. That’s why
+            we offer personalized furniture customization to meet your exact specifications. Work with our design
+            experts to create bespoke pieces that reflect your style, functionality requirements, and space constraints.
+            From custom-built cabinets to tailor-made sofas, we bring your vision to life.
+
+            Our Commitment:
+
+            At OBM Furniture Trading, customer satisfaction is at the heart of everything we do. Our dedicated team is
+            here to assist you every step of the way, from selecting the perfect pieces to ensuring a seamless delivery
+            and setup process. We are committed to offering exceptional service, high-quality products, and competitive
+            pricing.
+
+            Visit Us:
+
+            Explore our extensive showroom to see our furniture collections in person and receive expert advice from our
+            knowledgeable staff. We invite you to visit our store and experience firsthand the quality and craftsmanship
+            that define OBM Furniture Trading. Whether you’re furnishing a new space or updating your current décor, we
+            are here to help you create an environment that’s both functional and stylish.
+
+            Contact Us:
+
+            For inquiries, appointments, or to learn more about our products and services, please reach out to us at:
+
+            Address: 1234 Elegance Avenue, Suite 101, Metro City, MC 54321
+            Phone: (555) 987-6543
+            Email: contact_mockup@obmfurnituretrading.com
+        </p>
+    </div>
 </body>
+
 </html>
